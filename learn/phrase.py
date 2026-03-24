@@ -12,6 +12,13 @@ class Phrase:
         """Process content for palindrome testing."""
         return self.content.lower()
 
+    def compare_phrase_from_either_end(self):
+        """Compare a phrase.  From either - example racecar"""
+        for i in range(0, len(self.content)):
+            # if self.content[i] == self.content[len(self.content) - 1 - i]:
+            #     print("success %s %s", self.content[i], self.content[len(self.content) - 1 - i])
+            print ("%s %s", self.content[i], self.content[len(self.content) - 1 - i])
+
 
 class TranslatedPhrase(Phrase):
     """A class to represent phrases with translation."""
