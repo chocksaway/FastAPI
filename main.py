@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from learn import Phrase, TranslatedPhrase
+from learn.phrase import Phrase, TranslatedPhrase
 
 
 class HealthResponse(BaseModel):

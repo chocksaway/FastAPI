@@ -1,5 +1,8 @@
+import unittest
+
 from learn.phrase import Phrase
 
 
-def test_non_palindrome():
-    assert not Phrase("apple").is_palindrome()
+class TestPhrase(unittest.TestCase):
+    def test_non_palindrome(self):
+        self.assertFalse(Phrase("apple").is_palindrome())
