@@ -22,10 +22,10 @@ class Phrase:
 
 class TranslatedPhrase(Phrase):
     """A class to represent phrases with translation."""
+    language = {"German": "Deutsch", "French": "Francais"}
 
     def __init__(self, content, translation):
         super().__init__(content)
-        self.language = None
         self.translation = translation
         self.find_translation()
 
@@ -36,7 +36,9 @@ class TranslatedPhrase(Phrase):
 
     def find_translation(self):
         if self.translation == "German":
-            self.language = "Deutsch"
+            return self.language.get("German")
+        return None
+
 
 def reverse(string):
     """Reverse a string."""
