@@ -25,6 +25,7 @@ class TranslatedPhrase(Phrase):
 
     def __init__(self, content, translation):
         super().__init__(content)
+        self.language = None
         self.translation = translation
         self.find_translation()
 
@@ -34,8 +35,8 @@ class TranslatedPhrase(Phrase):
         return self.content.lower()
 
     def find_translation(self):
-        print("find_translation")
-
+        if self.translation == "German":
+            self.language = "Deutsch"
 
 def reverse(string):
     """Reverse a string."""
